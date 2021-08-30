@@ -1,0 +1,310 @@
+/*CSS Reset*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*CSS Variables*/
+:root{
+    --navbar-height:59px;
+}
+
+/*Navigation Bar*/
+#navbar{
+    position: sticky;
+    top:0;
+    display: flex;
+    align-items: center;
+    font-family: 'Baloo Thambi 2', cursive;
+    z-index: 2;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.85;
+    top: 0px;
+    left: 0px;
+}
+/*Navigation Bar Logo and Image*/
+#logo{
+    margin: 12px 15px;
+    
+
+}
+
+#logo img{
+    height: 67px;
+    margin: 5px 12px;
+    filter: invert(0.8);
+
+}
+
+/*Navigation Bar List Styling*/
+#navbar ul{
+    display: flex;
+}
+
+
+#navbar ul li{
+       color: white;
+       list-style: none;
+       font-size: 1.2rem;
+}
+#navbar ul li a{
+    color: white;
+   display: block;
+   padding: 3px 22px;
+   border-radius: 20px;
+   text-decoration: none;
+
+}
+#navbar ul li a:hover{
+    color: rgb(197, 40, 40);
+    background-color: wheat
+}
+
+/*Home Section*/
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 4px 200px;
+    height: 462px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    background: url('../img/brownvegi.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 567px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.98;
+
+    top: 0px;
+    left: 0px;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/*Servicces section*/
+
+#services{
+    margin: 34px;
+    display: flex;
+    flex-direction: row;
+}
+#services .box{
+    width: 50em;
+    border: rgb(217 110 110) 2px solid;
+    padding: 34px;
+    margin: 5px 6px;
+    border-radius: 23px;
+    background-color: rgba(211, 129, 129, 0.562);
+}
+
+#services .box img{
+    height: 100px;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+}
+#services .box p{
+    font-family: 'Baloo Thambi 2', cursive;
+
+}
+
+  #services .box:hover{
+    width: 50em;
+    border:solid 2px rgb(217 110 110);
+    padding: 34px;
+    margin: 5px 6px;
+    border-radius: 23px;
+    background-color: rgb(211 129 129);;
+  }
+
+            
+.box h2 a{
+    color: black;
+   display: block;
+   padding: 3px 22px;
+   border-radius: 20px;
+   text-decoration: none;
+}
+.box:hover{
+    transform: scaleX(0.9);
+}
+
+/*Contact Section*/
+#contact{
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+   
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url(../img/contact.jpg) no-repeat center center/cover;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 82px;
+}
+#contact-box form{
+    width: 80%;
+    height: 100%;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    height: 50%;
+}
+#contact-box form{
+    width: 37%;
+    
+}
+#contact-box label{
+    font-size: 1.0rem;
+    font-family: 'Bree Serif', serif;
+}
+footer{
+    background: black;
+    color: white;
+    margin-top: 900px;
+}
+
+
+
+/*Client Section*/
+
+.client-items{
+    padding: 34px;
+}
+#client-section{
+    height: 100px;
+    
+    
+
+}
+#client-section::before{
+    content: "";
+    position:absolute;
+    background:url('../breakfast.jpg');
+    height: 50%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.55;
+
+}
+#client{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#client img{
+    height: 180px;
+    
+
+}
+#apple{
+    height: 160px;
+    filter: invert(100%);
+}
+
+/*Utility Classes*/
+
+.h-primary{
+    font-size: 3.2rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+.h-secondary{
+    font-size: 1.5rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 29px;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
+.box h2 a{
+    color: black;
+   display: block;
+   padding: 3px 22px;
+   border-radius: 20px;
+   text-decoration: none;
+}
+
+
+/*Subsribe*/
+.subscribe{
+    background: url(../img/ppanfry.jpg) no-repeat center center/cover;
+    height: 490px;
+}
+#sub-h{text-align: center;
+    padding-top: 25%;
+    padding-right: 105px;
+    font-size: 40px;
+
+}
+.sub-mat{
+    float: right;
+    padding: 25px;
+}
+.btn1{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    
+    font-size: 1.5rem;
+    border-radius: 29px;
+    cursor: pointer;
+    margin-left: 313px;
+    margin-top: 10px;
+}
+.btn1:hover{
+    background-color: rgb(226, 26, 26);
+}
+.btn:hover{
+    background-color: rgb(226, 26, 26);
+}
+
+.tm-map{ width: 5000px;}

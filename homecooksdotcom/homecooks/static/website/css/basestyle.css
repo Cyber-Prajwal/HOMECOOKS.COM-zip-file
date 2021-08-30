@@ -1,0 +1,605 @@
+/*CSS Reset*/
+
+*{
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+body{
+
+    background-color:rgba(245, 222, 179, 0.76)}
+
+html{
+
+    scroll-behavior: smooth;
+
+    font-family: 'Baloo Thambi 2', cursive;
+
+}
+
+ 
+
+/*CSS Variables*/
+
+:root{
+
+    --navbar-height:59px;
+
+}
+
+ 
+
+/*Navigation Bar*/
+
+#navbar{
+
+    position:relative;
+
+    top:0;
+
+    display: flex;
+
+    align-items: center;
+
+    font-family: 'Baloo Thambi 2', cursive;
+
+}
+
+#navbar::before{
+
+    content: "";
+
+    background-color: black;
+
+    position: absolute;
+
+    height: 100%;
+
+    width: 100%;
+
+    z-index: -1;
+
+    opacity: 0.85;
+
+    top: 0px;
+
+    left: 0px;
+
+}
+
+/*Navigation Bar Logo and Image*/
+
+.logo{
+
+    margin: 12px 15px;
+
+    
+
+ 
+
+}
+
+ 
+
+.logo img{
+
+    height: 67px;
+
+    margin: 5px 12px;
+
+    filter: invert(0.8);
+
+ 
+
+}
+
+ 
+
+/*Navigation Bar List Styling*/
+
+#navbar ul{
+
+    display: flex;
+
+}
+
+ 
+
+#navbar ul li{
+
+       color: white;
+
+       list-style: none;
+
+       font-size: 1.2rem;
+
+}
+
+#navbar ul li a{
+
+    color: white;
+
+   display: block;
+
+   padding: 3px 22px;
+
+   border-radius: 20px;
+
+   text-decoration: none;
+
+ 
+
+}
+
+#navbar ul li a:hover{
+
+    color: rgb(197, 40, 40);
+
+    background-color: wheat
+
+}
+
+ 
+
+/*Home Section*/
+
+#home{
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 4px 200px;
+
+    height: 262px;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+#home::before{
+
+    content: "";
+
+    background: url('../img/cook-2364221.jpg') no-repeat center center/cover;
+
+    position: absolute;
+
+    height: 367px;
+
+    width: 100%;
+
+    z-index: -1;
+
+    opacity: 0.85;
+
+ 
+
+    top: 0px;
+
+    left: 0px;
+
+}
+
+ 
+
+#home h1{
+
+    color: white;
+
+    text-align: center;
+
+    font-family: 'Bree Serif', serif;
+
+}
+
+#home p{
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 1.5rem;
+
+    font-family: 'Bree Serif', serif;
+
+}
+
+
+
+
+
+/*Utility Classes*/
+
+ 
+
+.h-primary{
+
+    font-size: 3.2rem;
+
+    padding: 12px;
+
+    font-family: 'Bree Serif', serif;
+
+    color: black;
+
+    text-align: center;
+
+}
+
+ 
+
+.btn{
+
+    padding: 6px 20px;
+
+    border: 2px solid white;
+
+    background-color: brown;
+
+    color: white;
+
+    margin: 17px;
+
+    font-size: 1.5rem;
+
+    border-radius: 29px;
+
+    cursor: pointer;
+
+}
+
+.center{
+
+    text-align: center;
+
+}
+
+.bottom{
+
+    text-align: center;
+
+    background-color: black;
+
+    color: white;
+
+}
+
+.pay{
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.add{
+
+    background-color: green;
+
+    width:12%;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+
+    margin: .1em;
+
+    padding: .2%;
+
+    
+
+}
+
+ 
+
+.add:hover{
+
+    background-color: rgb(62, 155, 9);
+
+    
+
+}
+
+
+
+
+
+
+/*Description*/
+
+.description h1{
+
+    text-align: center;
+
+ 
+
+}
+
+.descenter{
+
+   
+
+        text-align: center;
+
+}
+
+.des{
+
+    background-color: antiquewhite;
+
+}
+
+
+
+
+/*Paybar*/
+
+#paybar{
+
+    position:sticky;
+
+    top:0;
+
+    display: flex;
+
+    align-items: center;
+
+    font-family: 'Baloo Thambi 2', cursive;
+
+    background-color:black;
+
+    opacity: 0.85;
+
+}
+
+#paybar::before{
+
+    position: sticky;
+
+    height: 100%;
+
+    width: 100%;
+
+    z-index: -1;
+
+    opacity: 0.85;
+
+    
+
+    background-color: beige
+
+    ;
+
+}
+
+#paybar h2{
+
+    color: white;
+
+}
+
+#paybar button{
+
+    float: right;
+
+    background-color: green;
+
+    padding: 5px;
+
+    border-radius: 10px;
+
+    width: 10%;
+
+    margin-left: 69%;
+
+}
+
+#paybar button:hover{
+
+    
+
+    background-color: rgb(94, 255, 0);
+
+    cursor: pointer;
+
+}
+
+ 
+
+/*CHECKBOX*/
+
+ 
+
+#services-container{
+
+    display: flex;
+
+    flex-direction: row;
+
+}
+
+.ingredients{
+
+    width: 50%;
+
+    float: left;
+
+    text-align: center;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-direction: column;
+
+}
+
+.recipe{
+
+    width: 50%;
+
+    float: right;
+
+    text-align: center;
+
+}
+
+.recip-c{
+
+    display: flex;
+
+    align-items: center;
+
+    flex-direction: column;
+
+}
+
+ 
+
+/*CHECKBOX L*/
+
+ 
+
+/* The container */
+
+.container {
+
+  display: block;
+
+  position: relative;
+
+  padding-left: 35px;
+
+  margin-bottom: 12px;
+
+  cursor: pointer;
+
+  font-size: 22px;
+
+  -webkit-user-select: none;
+
+  -moz-user-select: none;
+
+  -ms-user-select: none;
+
+  user-select: none;
+
+}
+
+ 
+
+/* Hide the browser's default checkbox */
+
+.container input {
+
+  position: absolute;
+
+  opacity: 0;
+
+  cursor: pointer;
+
+  height: 0;
+
+  width: 0;
+
+}
+
+ 
+
+/* Create a custom checkbox */
+
+.checkmark {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  height: 25px;
+
+  width: 25px;
+
+  background-color: #eee;
+
+}
+
+ 
+
+/* On mouse-over, add a grey background color */
+
+.container:hover input ~ .checkmark {
+
+  background-color: #ccc;
+
+}
+
+ 
+
+/* When the checkbox is checked, add a blue background */
+
+.container input:checked ~ .checkmark {
+
+  background-color: #2196F3;
+
+}
+
+ 
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+
+  content: "";
+
+  position: absolute;
+
+  display: none;
+
+}
+
+ 
+
+/* Show the checkmark when checked */
+
+.container input:checked ~ .checkmark:after {
+
+  display: block;
+
+}
+
+ 
+
+/* Style the checkmark/indicator */
+
+.container .checkmark:after {
+
+  left: 9px;
+
+  top: 5px;
+
+  width: 5px;
+
+  height: 10px;
+
+  border: solid white;
+
+  border-width: 0 3px 3px 0;
+
+  -webkit-transform: rotate(45deg);
+
+  -ms-transform: rotate(45deg);
+
+  transform: rotate(45deg);
+
+}

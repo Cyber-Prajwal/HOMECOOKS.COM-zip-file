@@ -1,0 +1,162 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Online Food Delivery Services | HomeMade.com</title>
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Bree+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" media="screen and (max-width: 1240px)" href="{% static 'website/css/phone.css' %}">
+</head>
+<body>
+    <nav id="navbar">
+    <div id="logo">
+        <img src="{% static 'website/img/logo3.png' %}" alt="MyOnlineMeal.com">
+    </div>
+
+    <ul>
+        <li class="item"><a href="#home">Home</a></li>
+        <li class="item"><a href="#services">Popular Recipes</a></li>
+        <li class="item"><a href="#outlets-section">Outlets</a></li>
+        <li class="item"><a href="#contact">Contact Us</a></li> 
+    </ul> 
+
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to HomeMade.com</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, ipsum doloremque reiciendis fugiat beatae eligendi mollitia corporis maxime illo, quam earum quae!</p>
+        <button class="btn">Order Now</button>
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary center">Most Popular Recipes</h1>
+        <div id="services">
+            <div class="box">
+                <img src="{% static 'website/img/paneer-butter-masala-recipe-2.jpg' %}" alt="" >
+                <h2 class="h-secondary center"><a href="butterpaneer.html">Butter Paneer</a></h2>
+                <p class="center"> view and buy ingredients</p>
+            </div>
+            <div class="box">
+                <img src="{% static 'website/img/pizza.jpg' %}" alt="" >
+                <h2 class="h-secondary center"><a href="butterpaneer.html">pizza</a></h2>
+                <p class="center">  from near you</p>
+            </div>
+            <div class="box">
+                <img src="{% static 'website/img/delivery.jpg' %}" alt="" >
+                <h2 class="h-secondary center"><a href="butterpaneer.html">Lasagne</a></h2>
+                <p class="center">  near you</p>
+            </div>
+            <div class="box">
+                <img src="{% static 'website/img/delivery.jpg' %}" alt="" >
+                <h2 class="h-secondary center"><a href="butterpaneer.html">Sausages</a></h2>
+                <p class="center">  near you</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="outlets-section">
+    <h1 class="h-primary center">Outlets Near you</h1>
+    <div class="tm-container-inner-2 tm-map-section">
+        <div class="row">
+            <div class="col-12">
+                <div class="tm-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d241080.5450440325!2d72.8180354!3d19.2439077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x71db35c790569fc7!2sThe%20Good%20Home%20Food!5e0!3m2!1sen!2sin!4v1630309867656!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="outlets"><h3>Map to be inserted here</h3></div>
+        </section>
+
+    
+
+
+    <section class="subscribe">
+        <div class="sub-mat">
+        <h2 id="sub-h">Subscribe to our Newsletter </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptatum soluta ratione corporis, eius minus sunt r</p>
+        <button class="btn1">Subscribe</button>
+    </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="{% url 'home' %}" method = "post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="emmail">Email: </label>
+                    <input type="text" name="email" id="email" placeholder="Enter your Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone: </label>
+                    <input type="text" name="phone" id="phone" placeholder="Enter your Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="name">Enter Order Below: </label>
+                    <textarea rows="2" name="message" class="form-control" placeholder="Type Your order Here" required=""></textarea>
+                  </div>
+                <div class="form-group">
+                <div class="form-group">
+                    <label for="name">Enter Address Below: </label>
+                    <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group tm-d-flex">
+                    <button type="submit" class="btn">
+                      SUBMIT
+                    </button>
+                </div>
+            </form>
+        </div>
+        </section>
+        <div class="tm-container-inner-2 tm-info-section">
+            <div class="row">
+
+                <!-- FAQ --><!---
+                <div class="col-12 tm-faq">
+                    <h2 class="text-center tm-section-title">FAQs</h2>
+                    <p class="text-center">This section comes with Accordion tabs for different questions and answers about Simple House HTML CSS template. Thank you. #666</p>
+                    <div class="tm-accordion">
+                        <button class="accordion">1. Fusce eu lorem et dui #09C maximus varius?</button>
+                        <div class="panel">
+                          <p>#666 Duis blandit purus vel nenenatis rutrum. Pellentesque pellentesque tindicunt lorem, ac egestas massa sollicitudin vel. Nam scelerisque vulputate quam mollis pretium. Morbi condimentum volutpat.</p>
+                        </div>
+                        
+                        <button class="accordion">2. Vestibulum #999 ante ipsum primis in faucibus orci?</button>
+                        <div class="panel">
+                          <p>Mauris euismod odio at commodo rhoncus. Maecenas nec interdum purus, sed auctor est. Sed eleifend urna nec diam consectetur, a aliquet turpis facilisis. Integer est sapien, sagittis vel massa vel, interdum euismod erat. Aenean sollicitudin nisi neque, efficitur posuere urna rutrum porta.</p>
+                        </div>
+                        
+                        <button class="accordion">3. Can I redistribute this template as a ZIP file?</button>
+                        <div class="panel">
+                          <p>Redistributing this template as a downloadable ZIP file on any template collection site is strictly prohibited. You will need to <a href="https://templatemo.com/contact">contact TemplateMo</a> for additional permissions about our templates. Thank you.</p>
+                        </div>
+                        
+                        <button class="accordion">4. Ut ac erat sit amet neque efficitur faucibus et in lectus?</button>
+                        <div class="panel">
+                            <p>Vivamus viverra pretium ultricies. Praesent feugiat, sapien vitae blandit efficitur, sem nulla venenatis nunc, vel maximus ligula sem a sem. Pellentesque ligula ex, facilisis ac libero a, blandit ullamcorper enim.</p>
+                        </div>
+                    </div>	
+                </div>
+            </div>
+        </div>
+--->
+
+<footer>
+    <div class="center">  
+        Copyright &copy; www.myOnlineMeal.com. All rights reserved!
+    </div>
+</footer>
+</body>
+</html>
